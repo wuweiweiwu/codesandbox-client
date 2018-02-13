@@ -4,6 +4,7 @@ import CrossIcon from 'react-icons/lib/md/clear';
 import EditIcon from 'react-icons/lib/go/pencil';
 import AddFileIcon from 'react-icons/lib/md/insert-drive-file';
 import AddDirectoryIcon from 'react-icons/lib/md/create-new-folder';
+import UploadImageIcon from 'react-icons/lib/md/file-upload';
 
 import Tooltip from 'common/components/Tooltip';
 
@@ -23,6 +24,7 @@ function EditIcons({
   onEdit,
   onCreateFile,
   onCreateDirectory,
+  onUploadImage,
 }) {
   return (
     <div className={className}>
@@ -32,6 +34,13 @@ function EditIcons({
             <Tooltip title="Edit">
               <Icon onClick={handleClick(onEdit)}>
                 <EditIcon />
+              </Icon>
+            </Tooltip>
+          )}
+          {onUploadImage && (
+            <Tooltip title="Upload Image">
+              <Icon onClick={handleClick(onUploadImage)}>
+                <UploadImageIcon />
               </Icon>
             </Tooltip>
           )}
